@@ -1,12 +1,19 @@
 package org.aoc;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.awt.*;
+import java.io.IOException;
 
 public class Day9Test {
 
+
+    @BeforeEach
+    void clearPoints(){
+        Day9.points.clear();
+    }
     @Test
     void moveRight(){
 
@@ -56,6 +63,13 @@ public class Day9Test {
         Point p = (Point) Day9.points.stream().findFirst().get();
         Assertions.assertEquals(0,p.x);
         Assertions.assertEquals(0,p.y);
+    }
+
+    @Test
+    void run() throws IOException {
+
+        Day9.run("src/test/resources/9_test.txt");
+        Assertions.assertEquals(13, Day9.points.size());
     }
 
 }
