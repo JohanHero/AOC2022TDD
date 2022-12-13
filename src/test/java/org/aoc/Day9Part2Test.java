@@ -1,10 +1,10 @@
 package org.aoc;
 
-import org.junit.jupiter.api.Assertions;
+import org.aoc.Day9.Day9;
+import org.aoc.Day9.Day9Part2;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.awt.*;
 import java.io.IOException;
 
 public class Day9Part2Test {

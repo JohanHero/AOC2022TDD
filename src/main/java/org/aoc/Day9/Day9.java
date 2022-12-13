@@ -1,5 +1,7 @@
-package org.aoc;
+package org.aoc.Day9;
 
+
+import org.aoc.Util;
 
 import java.awt.*;
 import java.io.IOException;
