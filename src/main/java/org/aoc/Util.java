@@ -52,23 +52,24 @@ public class Util {
 
         return listOfStacks;
     }
+
     public static int[][] create2DGrid(String input) throws IOException {
 
-    Scanner s = new Scanner(input);
-    int size = s.nextLine().length();
+        Scanner s = new Scanner(input);
+        int size = s.nextLine().length();
         s.close();
-    Scanner scanner = new Scanner(input);
-    int[][] grid = new int[size][size];
+        Scanner scanner = new Scanner(input);
+        int[][] grid = new int[size][size];
         while (scanner.hasNextLine()) {
 
-        for (int row = 0; row < size; row++) {
-            String line = scanner.nextLine();
-            for (int col = 0; col < size; col++) {
-                int num = Integer.parseInt(String.valueOf(line.charAt(col)));
-                grid[row][col] = num;
+            for (int row = 0; row < size; row++) {
+                String line = scanner.nextLine();
+                for (int col = 0; col < size; col++) {
+                    int num = Integer.parseInt(String.valueOf(line.charAt(col)));
+                    grid[row][col] = num;
+                }
             }
         }
-    }
         return grid;
-}
+    }
 }
